@@ -1,6 +1,6 @@
 [project]
 name = "plugin-stubs"
-version = "1.0.0"
+version = "1.0.1"
 description = "A type stub repository for Plugin."
 readme = "README.md"
 authors = [

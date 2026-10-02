@@ -2,6 +2,8 @@ from typing import Literal, overload
 
 from .countryballs.views import BallSpawnViewOverride, CatchRowOverride, CountryballNamePromptOverride
 
+__all__ = ("get_component",)
+
 @overload
 def get_component(component: Literal["BallSpawnView"]) -> type["BallSpawnViewOverride"]: ...
 @overload
