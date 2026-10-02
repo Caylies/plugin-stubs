@@ -12,5 +12,5 @@ Type stubs for [Plugin](https://github.com/Caylies/Plugin).
 Using [uv](https://docs.astral.sh/uv/):
 
 ```bash
-uv add "plugin-stubs[all] @ git+https://github.com/Caylies/plugin-stubs@1.0.0"
+uv add "plugin-stubs[all] @ git+https://github.com/Caylies/plugin-stubs@1.0.1"
 ```
