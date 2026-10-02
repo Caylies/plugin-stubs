@@ -1,0 +1,53 @@
+[project]
+name = "plugin-stubs"
+version = "1.0.0"
+description = "A type stub repository for Plugin."
+readme = "README.md"
+authors = [
+    { name = "Cayla", email = "official.dotzz@gmail.com" }
+]
+requires-python = ">=3.13"
+classifiers = [
+    "Typing :: Stubs Only",
+]
+
+[project.optional-dependencies]
+all = [
+    "bd-stubs[all]",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/plugin-stubs",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = true
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E203"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ballsdex", "bd_models", "settings"]
+split-on-trailing-comma = false
+
+[tool.uv.sources]
+bd-stubs = { git = "https://github.com/Caylies/bd-stubs", rev = "0.1.2" }
